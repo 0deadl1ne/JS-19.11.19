@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+		var arr =[];
+		arr.lenght = 25;
+		for ( i = 0; i < arr.lenght; i++ ) {
+
+    arr.push( Math.round( Math.random() * 100 ));
+
+
+               }
+		var n = +prompt('input first border : ');
+		var m = +prompt('input second border : ');
+		
+		
+		
+
+        
+
+  var changed_array = arr.slice(n-1, m);
+  document.write(arr + '<br>');
+  document.write(changed_array);
+
+
+
+
+
+
+	</script>
+</body>
+</html>

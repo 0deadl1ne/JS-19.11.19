@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+</head>
+<body>
+	 <!-- 1. Сделать собственные примеры методов применяемых для массивов. -->
+	<script type="text/javascript">
+	var task = [];
+	task.length = +prompt('array length = ');
+	 for(i=0 ; i<task.length; i++){
+	        task[i] = prompt('Input a[' + (i + 1) + ']');
+	    } 
+	var join = task.join(" # ");
+	document.write( 'join : ' + join + '<br>');
+	var concat = task.concat(join);
+	document.write('concat : ' + concat + '<br>')
+	var reverse = task.reverse();
+	document.write('reverse : ' + reverse + '<br>')
+	var slice = task.slice(3);
+	document.write('slice : ' + slice + '<br>')
+    task.splice( 2, 2, 45, 20);
+	document.write('splice : ' + task + '<br>')
+	task.sort(function (a, b) { return a - b; });
+	document.write('sort : ' + task + '<br>')
+	task.push('hello');
+	document.write('push : ' + task + '<br>')
+	 var deleteElement = task.pop();
+	 document.write('pop : ' + task + '<br>' + 'element: ' + deleteElement + '<br>')
+	  var addElement = task.unshift('test');
+	  document.write('unshift : ' + task + '<br>' + 'length: ' + addElement + '<br>');
+	  var deleteElement = task.shift();
+	   document.write('shift : ' + task + '<br>' + 'element: ' + deleteElement + '<br>');
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+     Результат должен выводиться в консоль. -->
+	<script type="text/javascript">
+		var array = [];
+		array.length = 6;
+	    for(i=1 ; i<array.length; i++){
+	    	array[i] = + prompt('Input a[' + i + ']');
+	    } 
+	    console.log(array);
+		console.log(getMinAndMax(array));
+
+
+		function getMinAndMax(arr) {
+            let min = arr[1];
+            let max = arr[1];
+
+
+
+
+            for (i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+                else if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+
+            return [min,max]
+
+        }
+
+ 
+
+
+
+	</script>
+	
+</body>
+</html>
