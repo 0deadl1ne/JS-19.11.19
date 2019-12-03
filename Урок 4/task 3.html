@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+     // 3.  Создать игру "Камень-Ножницы-Бумага".
+     //    Выбор компьютера определяется строкой:  
+     //    "var computerChoice = Math.random();
+     //    alert(computerChoice);".
+     //    Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера.
+    var computerChoice= Math.random();
+    var userChoice = prompt("Выберите: камень, ножницы или бумага");
+    userChoice.toUpperCase();
+
+    function playGame(){
+      switch (true){
+        case (computerChoice < 0.33):
+        computerChoice="Камень";
+        break;
+
+        case (computerChoice < 0.66):
+        computerChoice="Бумага";
+        break;
+
+        case (computerChoice < 1):
+        computerChoice="Ножницы";
+        break;
+      }
+      if(computerChoice==userChoice){
+        document.write("Выбор компьютера: " + computerChoice + "<br>" + "Выбор игрока: " + userChoice + "<br>" + " - Ничья");
+      }
+      else if(computerChoice=="Камень" && userChoice=="Бумага"){
+        document.write("Выбор компьютера: " + computerChoice + "<br>" + "Выбор игрока: " + userChoice + "<br>" +" - Вы победили");
+      }
+      else if(computerChoice=="Камень" && userChoice=="Ножницы"){
+        document.write("Выбор компьютера: " + computerChoice + "<br>" + "Выбор игрока: " + userChoice + "<br>" +" - Победил компьютер");
+      }
+      else if(computerChoice=="Бумага" && userChoice=="Ножницы"){
+        document.write("Выбор компьютера: " + computerChoice + "<br>" + "Выбор игрока: " + userChoice + "<br>" +" - Вы победили");
+      }
+      else if(computerChoice=="Ножницы" && userChoice=="Бумага"){
+        document.write("Выбор компьютера: " + computerChoice + "<br>" + "Выбор игрока: " + userChoice + "<br>" +" - Победил компьютер");
+      }
+      else if(computerChoice=="Бумага" && userChoice=="Камень"){
+        document.write("Выбор компьютера: " + computerChoice + "<br>" + "Выбор игрока: " + userChoice + "<br>" +" - Победил компьютер");
+      }
+      else if(computerChoice=="Ножницы" && userChoice=="Камень"){
+        document.write("Выбор компьютера: " + computerChoice + "<br>" + "Выбор игрока: " + userChoice + "<br>" +" - Вы победили");
+      }
+      
+    }
+
+    playGame();
+
+
+  </script>
+</body>
+</html>
