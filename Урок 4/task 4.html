@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 4. Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл. -->
+	<script type="text/javascript">
+		function fibonacci(m) {
+		let n = 500; 
+        let fibonacci = [0, 1]; 
+
+        for (i = 2; i < n; i ++) {
+           fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+        }
+         
+
+        for (i = m; i <= m; i ++) {
+	        return fibonacci[i-1];
+	    }
+		
+	}
+        var n = + prompt('input n:');
+        var result = fibonacci(n);
+        document.write ('<br>' + result);
+	</script>
+	
+</body>
+</html>
