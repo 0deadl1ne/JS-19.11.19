@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.trafficLight{
+			width: 80px;
+			height: 200px;
+			background: grey;
+			position: relative;
+			border-radius: 50px;
+			margin: auto;
+			border: 1px solid black;
+		}
+		.light{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;
+			border: 1px solid black;
+		}
+
+		#red{
+			background: black;
+			right: 0;
+			left: 0;
+			top: 12px;
+			margin: auto;
+			
+		}
+		#yellow{
+			margin: auto;
+			background: black;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			
+
+		}
+		#green{
+			margin: auto;
+			background: black;
+		   /* top: 0;*/
+		    bottom: 12px;
+		    
+		    right: 0;
+		    left: 0;
+		   
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="trafficLight">
+		<div class="light red"  id="red" ></div>
+		<div class="light yellow" id="yellow" ></div>
+		<div class="light green" id="green" ></div>
+	</div>
+	<script type="text/javascript">
+	var red = document.getElementById('red');
+	var yellow = document.getElementById('yellow');
+	var green = document.getElementById('green');
+		var colorIndex = 0;
+
+
+		// while (true){
+		// 	if(i%1000 == 0){
+		// 		changeColor(i%3);
+		// 	}
+		// 	i++;
+		// 	if(i==100000){
+		// 		break;
+		// 	}
+
+		// }
+		setInterval(changeColor, 2000);
+
+		function changeColor(){
+			switch(colorIndex){
+				case(0):
+				red.style.background="red";
+				yellow.style.background="black";
+				green.style.background="black";
+				colorIndex = 1;
+				break;
+				
+				case(1):
+				yellow.style.background="yellow";
+				red.style.background="black";
+				green.style.background="black";
+				colorIndex = 2;
+				break;
+				
+				case(2):
+				green.style.background="green";
+				red.style.background="black";
+				yellow.style.background="black";
+				colorIndex = 3;
+				break;
+				case(3):
+				green.style.background="black";
+				red.style.background="black";
+				yellow.style.background="yellow";
+				colorIndex = 0;
+				break;
+			
+
+
+			}
+		}
+	
+		// function changeColorRed() {
+		// 	red.style.background="red";
+		// 	green.style.background = 'black';
+
+		// }
+		
+		// function changeColorYellow() {
+		// 	yellow.style.background="yellow";
+
+		// }
+		
+		// function changeColorGreen() {
+		// 	green.style.background="green";
+		// 	red.style.background = 'black';
+
+		// }
+		console.log(2000%3);
+
+	</script>
+	
+</body>
+</html>
