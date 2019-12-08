@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		 // 1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
+   //     в каком квадранте в декартовой системе координат находится данная точка.
+   //     Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+	
+	var Point ={
+		x: 1,
+		y: 2,
+		GetQuadrant: function (x,y) {
+			
+
+			if(x < 0 && y > 0){
+				alert("second");
+
+			}
+			else if(x > 0  && y < 0){
+				alert('fourth');
+			}
+			else if(x > 0 && y > 0){
+				alert('first');
+			}
+			else if (x < 0 && y < 0) {
+				alert('third');
+			}
+			else{
+				alert('0')
+			}
+
+
+			// body...
+		}
+
+}
+// Point.x = -2;
+// Point.y = -8;
+// Point.GetQuadrant(Point.x, Point.y);
+Point.x = 2;
+Point.y = -8;
+Point.GetQuadrant(Point.x, Point.y);
+
+		
+	</script>
+	
+	
+</body>
+</html>
