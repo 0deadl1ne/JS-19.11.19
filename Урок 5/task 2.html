@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+       Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+       В зависимости от принятого знака операции, вызвать соответствующий метод. -->
+	<script type="text/javascript">
+		var Calculator ={
+			sign: '+',
+			// Calculate: function(sign, a, b){
+			// 	switch(sign){
+			// 	case('-'):
+			// 		alert(a - b);
+			// 		break;
+			// 	case('+'):
+			// 		 alert(a+b);
+			// 		break;
+			// 	case('/'):
+			// 		alert(a/b);
+			// 		break;
+			// 	case('*'):
+			// 		alert(a*b);
+			// 		break;
+
+			// 	}
+
+			// }
+			Add: function(a,b){
+				alert(a+b);
+			},
+
+			Subtraction: function(a,b){
+				alert(a-b);
+			},
+
+            Division: function(a,b){
+            	alert(a/b);
+            },
+            Multiply: function(a,b){
+            	alert(a*b);
+            }
+
+		}
+		var a = +prompt('a?');
+		Calculator.sign = prompt('input sign');
+		var b = +prompt('b?');
+		// Calculator.Calculate(Calculator.sign, a, b);
+		switch(Calculator.sign){
+			case('-'):
+					Calculator.Subtraction( a, b);
+					break;
+				case('+'):
+					 Calculator.Add( a, b);
+					break;
+				case('/'):
+					Calculator.Division( a, b);
+					break;
+				case('*'):
+					Calculator.Multiply( a, b);
+					break;
+		}
+
+		
+	</script>
+
+	
+</body>
+</html>
